@@ -1,10 +1,11 @@
 /** @format */
 
-import { Types } from 'mongoose';
+import { v4 as uuidv4 } from 'uuid';
 import { Notification } from '../models/notification.models';
 import { User } from '../models/user.models';
 import { publishToQueue } from '../config/message.queue';
 import type { INotification } from '../models/notification.models';
+
 interface NotificationData {
   id: string;
   userId: string;
@@ -22,16 +23,13 @@ export const createNotification = async (
   }
 
   const notificationData: NotificationData = {
-    id: generateUUID(),
+    id: uuidv4(),
     userId: user.id,
     message,
     read: false,
   };
 
-  const notification = new Notification({
-    ...notificationData,
-    userId: new Types.ObjectId(notificationData.userId),
-  });
+  const notification = new Notification(notificationData);
   await notification.save();
 
   // Publish the notification to the message queue
@@ -46,7 +44,7 @@ export const getNotifications = async (
     throw new Error('User not found');
   }
 
-  const notifications = await Notification.find({ userId: user._id });
+  const notifications = await Notification.find({ userId: user.id });
   return notifications;
 };
 
@@ -61,8 +59,7 @@ export const markNotificationAsRead = async (id: string): Promise<void> => {
   await Notification.updateOne({ id }, { read: true });
 };
 
-const generateUUID = (): string => {
-  // Generate and return a unique identifier (you can use a library like 'uuid' for this)
-  // For simplicity, we'll use a timestamp-based UUID here
-  return Date.now().toString(36) + Math.random().toString(36).substr(2, 5);
+export const getAllNotifications = async (): Promise<INotification[]> => {
+  const notifications = await Notification.find().sort({ createdAt: -1 });
+  return notifications;
 };

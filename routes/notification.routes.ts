@@ -6,6 +6,7 @@ import {
   getNotifications,
   getNotificationById,
   markNotificationAsRead,
+  getAllNotifications,
 } from '../services/notification.service';
 
 const router = express.Router();
@@ -17,6 +18,15 @@ router.post('/', async (req, res) => {
     res.status(201).json({ message: 'Notification created successfully' });
   } catch (error) {
     res.status(400).json({ error: (error as any).message });
+  }
+});
+
+router.get('/all', async (req, res) => {
+  try {
+    const notifications = await getAllNotifications();
+    res.json(notifications);
+  } catch (error) {
+    res.status(500).json({ error: (error as any).message });
   }
 });
 

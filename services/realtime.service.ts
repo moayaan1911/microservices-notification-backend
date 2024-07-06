@@ -2,10 +2,10 @@
 
 import WebSocket from 'ws';
 import { Server } from 'http';
-import type { INotification } from '../models/notification.models';
+import { Notification } from '../models/notification.models';
 import { consumeFromQueue } from '../config/message.queue';
 import logger from '../config/logger';
-
+import type { INotification } from '../models/notification.models';
 let wss: WebSocket.Server;
 
 export const initializeWebSocketServer = (server: Server): void => {
@@ -16,7 +16,6 @@ export const initializeWebSocketServer = (server: Server): void => {
 
     ws.on('message', (message: string) => {
       logger.info(`Received message: ${message}`);
-      // Handle incoming messages from the client if needed
     });
 
     ws.on('close', () => {
@@ -29,9 +28,23 @@ export const initializeWebSocketServer = (server: Server): void => {
 };
 
 const consumeNotificationsFromQueue = async (): Promise<void> => {
-  await consumeFromQueue('notifications', (message: string) => {
-    const notification: INotification = JSON.parse(message);
-    broadcastNotification(notification);
+  await consumeFromQueue('notifications', async (message: string) => {
+    try {
+      const notificationData: INotification = JSON.parse(message);
+
+      // Create a new notification document
+      const notification = new Notification(notificationData);
+
+      // Save the notification to the database
+      await notification.save();
+
+      logger.info(`Notification saved to database: ${notification._id}`);
+
+      // Broadcast the notification
+      broadcastNotification(notification);
+    } catch (error) {
+      logger.error('Error processing notification:', error);
+    }
   });
 };
 

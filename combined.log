@@ -8,3 +8,48 @@
 {"level":"info","message":"Connected to MongoDB","service":"notification-service"}
 {"level":"info","message":"Connected to RabbitMQ","service":"notification-service"}
 {"level":"info","message":"Connected to MongoDB","service":"notification-service"}
+{"level":"info","message":"Server is running on port 3000","service":"notification-service"}
+{"level":"info","message":"Connected to MongoDB","service":"notification-service"}
+{"level":"info","message":"Connected to RabbitMQ","service":"notification-service"}
+{"level":"info","message":"Server is running on port 3000","service":"notification-service"}
+{"level":"info","message":"Connected to MongoDB","service":"notification-service"}
+{"level":"info","message":"Connected to RabbitMQ","service":"notification-service"}
+{"level":"info","message":"Server is running on port 3000","service":"notification-service"}
+{"level":"info","message":"Connected to MongoDB","service":"notification-service"}
+{"level":"info","message":"Connected to RabbitMQ","service":"notification-service"}
+{"level":"error","message":"Error: request size did not match content length\n    at createError (D:\\microservices-notification-backend\\node_modules\\http-errors\\index.js:91:2)\n    at onEnd (D:\\microservices-notification-backend\\node_modules\\raw-body\\index.js:278:8)\n    at endReadableNT (native)\n    at processTicksAndRejections (native)","service":"notification-service"}
+{"level":"info","message":"Server is running on port 3000","service":"notification-service"}
+{"level":"info","message":"Connected to MongoDB","service":"notification-service"}
+{"level":"info","message":"Connected to RabbitMQ","service":"notification-service"}
+{"level":"error","message":"Error: request size did not match content length\n    at createError (D:\\microservices-notification-backend\\node_modules\\http-errors\\index.js:91:2)\n    at onEnd (D:\\microservices-notification-backend\\node_modules\\raw-body\\index.js:278:8)\n    at endReadableNT (native)\n    at processTicksAndRejections (native)","service":"notification-service"}
+{"level":"info","message":"Server is running on port 3000","service":"notification-service"}
+{"level":"info","message":"Connected to MongoDB","service":"notification-service"}
+{"level":"info","message":"Connected to RabbitMQ","service":"notification-service"}
+{"level":"error","message":"Error: request size did not match content length\n    at createError (D:\\microservices-notification-backend\\node_modules\\http-errors\\index.js:91:2)\n    at onEnd (D:\\microservices-notification-backend\\node_modules\\raw-body\\index.js:278:8)\n    at endReadableNT (native)\n    at processTicksAndRejections (native)","service":"notification-service"}
+{"level":"info","message":"Server is running on port 3000","service":"notification-service"}
+{"level":"info","message":"Connected to MongoDB","service":"notification-service"}
+{"level":"info","message":"Connected to RabbitMQ","service":"notification-service"}
+{"level":"error","message":"Error: request size did not match content length\n    at createError (D:\\microservices-notification-backend\\node_modules\\http-errors\\index.js:91:2)\n    at onEnd (D:\\microservices-notification-backend\\node_modules\\raw-body\\index.js:278:8)\n    at endReadableNT (native)\n    at processTicksAndRejections (native)","service":"notification-service"}
+{"level":"info","message":"Server is running on port 3000","service":"notification-service"}
+{"level":"info","message":"Connected to MongoDB","service":"notification-service"}
+{"level":"info","message":"Connected to RabbitMQ","service":"notification-service"}
+{"level":"info","message":"Server is running on port 3000","service":"notification-service"}
+{"level":"info","message":"Connected to MongoDB","service":"notification-service"}
+{"level":"info","message":"Connected to RabbitMQ","service":"notification-service"}
+{"level":"info","message":"Server is running on port 3000","service":"notification-service"}
+{"level":"info","message":"Connected to MongoDB","service":"notification-service"}
+{"level":"info","message":"Connected to RabbitMQ","service":"notification-service"}
+{"code":11000,"errorResponse":{"code":11000,"errmsg":"E11000 duplicate key error collection: test.notifications index: id_1 dup key: { id: \"lyahohcvq6jno\" }","index":0,"keyPattern":{"id":1},"keyValue":{"id":"lyahohcvq6jno"}},"index":0,"keyPattern":{"id":1},"keyValue":{"id":"lyahohcvq6jno"},"level":"error","message":"Error processing notification: E11000 duplicate key error collection: test.notifications index: id_1 dup key: { id: \"lyahohcvq6jno\" }","originalColumn":12,"originalLine":154,"service":"notification-service","stack":"Error: E11000 duplicate key error collection: test.notifications index: id_1 dup key: { id: \"lyahohcvq6jno\" }\n    at new MongoError (D:\\microservices-notification-backend\\node_modules\\mongodb\\lib\\error.js:109:13)\n    at new MongoServerError (D:\\microservices-notification-backend\\node_modules\\mongodb\\lib\\error.js:184:12)\n    at <anonymous> (D:\\microservices-notification-backend\\node_modules\\mongodb\\lib\\operations\\insert.js:45:43)\n    at processTicksAndRejections (:12:39)"}
+{"level":"error","message":"Error: request size did not match content length\n    at createError (D:\\microservices-notification-backend\\node_modules\\http-errors\\index.js:91:2)\n    at onEnd (D:\\microservices-notification-backend\\node_modules\\raw-body\\index.js:278:8)\n    at endReadableNT (native)\n    at processTicksAndRejections (native)","service":"notification-service"}
+{"level":"info","message":"Server is running on port 3000","service":"notification-service"}
+{"level":"info","message":"Connected to MongoDB","service":"notification-service"}
+{"level":"info","message":"Connected to RabbitMQ","service":"notification-service"}
+{"level":"info","message":"Server is running on port 3000","service":"notification-service"}
+{"level":"info","message":"Connected to MongoDB","service":"notification-service"}
+{"level":"info","message":"Connected to RabbitMQ","service":"notification-service"}
+{"level":"info","message":"Server is running on port 3000","service":"notification-service"}
+{"level":"info","message":"Connected to MongoDB","service":"notification-service"}
+{"level":"info","message":"Connected to RabbitMQ","service":"notification-service"}
+{"level":"info","message":"Server is running on port 3000","service":"notification-service"}
+{"level":"info","message":"Connected to MongoDB","service":"notification-service"}
+{"level":"info","message":"Connected to RabbitMQ","service":"notification-service"}

@@ -1,7 +1,7 @@
 /** @format */
 
 import express from 'express';
-import { registerUser, loginUser } from '../services/auth.service';
+import { registerUser, loginUser, getAllUsers } from '../services/auth.service';
 
 const router = express.Router();
 
@@ -24,5 +24,13 @@ router.post('/login', async (req, res) => {
     res.status(401).json({ error: (error as any).message });
   }
 });
-
+router.get('/users', async (req, res) => {
+  try {
+    console.log('Fetching users...');
+    const users = await getAllUsers();
+    res.json(users);
+  } catch (error) {
+    res.status(500).json({ error: (error as any).message });
+  }
+});
 export default router;

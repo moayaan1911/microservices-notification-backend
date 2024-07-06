@@ -4,6 +4,10 @@
 
 This project is an advanced microservices-based real-time notification system built using Bun.js and Express.js. It handles high-volume message processing and delivers real-time notifications to users. The system integrates message queues and implements real-time data streaming to ensure efficient and scalable notification delivery.
 
+# ENDPOINTS GUIDE
+
+For a comprehensive guide to all API endpoints, including example requests and responses, please refer to our [ENDPOINTS.md](ENDPOINTS.md) file.
+
 ## Tech Stack
 
 - 🚀 Bun.js - Fast and lightweight JavaScript runtime

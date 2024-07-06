@@ -46,7 +46,14 @@ export const loginUser = async (
   );
   return token;
 };
-
+export const getAllUsers = async (): Promise<any[]> => {
+  try {
+    const users = await User.find();
+    return users;
+  } catch (error) {
+    throw new Error('Error fetching users');
+  }
+};
 const generateUUID = (): string => {
   // Generate and return a unique identifier (you can use a library like 'uuid' for this)
   // For simplicity, we'll use a timestamp-based UUID here
