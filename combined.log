@@ -1,0 +1,10 @@
+{"level":"info","message":"Server is running on port 3000","service":"notification-service"}
+{"level":"info","message":"Connected to MongoDB","service":"notification-service"}
+{"level":"info","message":"Connected to RabbitMQ","service":"notification-service"}
+{"level":"info","message":"Server is running on port 3000","service":"notification-service"}
+{"level":"info","message":"Connected to MongoDB","service":"notification-service"}
+{"level":"info","message":"Connected to RabbitMQ","service":"notification-service"}
+{"level":"info","message":"Server is running on port 3000","service":"notification-service"}
+{"level":"info","message":"Connected to MongoDB","service":"notification-service"}
+{"level":"info","message":"Connected to RabbitMQ","service":"notification-service"}
+{"level":"info","message":"Connected to MongoDB","service":"notification-service"}
